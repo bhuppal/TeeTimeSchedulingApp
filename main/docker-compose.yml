@@ -31,17 +31,16 @@ services:
       - db
    
   frontend:
-    container_name: golf_tee_time_frontend
     build:
       context:  ./../frontend
       dockerfile: ./../frontend/Dockerfile
-    image: img-golf-tee-time-frontend  
     restart: always
+    container_name: golf_tee_time_frontend
     ports:
       - "3000:3000"
     volumes:
       - ./../frontend:/app
-      - ./../frontend/node_modules
+      - ./../frontend/node_modules:/app/node_modules
     deploy:
       mode: replicated
       replicas: 1
