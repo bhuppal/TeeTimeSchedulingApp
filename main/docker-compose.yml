@@ -10,12 +10,12 @@ services:
       - '5432:5432'
     volumes:    
       - ./postgresdb/dbScriptInitialSetup.sql:/docker-entrypoint-initdb.d/create_tables.sql
-
+      
   api:
     container_name: backend-api
     build:
       context: ./../backend
-    image: golf-tee-time-schedule-api
+    image: img-golf-tee-time-schedule-api
     depends_on:
       - db
     ports:
@@ -29,3 +29,23 @@ services:
       DB_NAME: postgres
     links:
       - db
+   
+  frontend:
+    container_name: golf_tee_time_frontend
+    build:
+      context:  ./../frontend
+      dockerfile: ./../frontend/Dockerfile
+    image: img-golf-tee-time-frontend  
+    restart: always
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./../frontend:/app
+      - ./../frontend/node_modules
+    deploy:
+      mode: replicated
+      replicas: 1
+ 
+volumes:
+  db:
+    driver: local
