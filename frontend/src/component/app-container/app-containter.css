@@ -1,0 +1,18 @@
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+.row.content {height: 450px}
+
+.leftsidepanel {
+  padding-top: 20px;
+  background-color: #f1f1f1;
+  background-image: url(https://images.unsplash.com/photo-1592919505780-303950717480?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=927&q=80);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.btn-success, .btn-success:hover, .btn-success:active, .btn-success:visited {
+  background-color: #47b252 !important;
+}
