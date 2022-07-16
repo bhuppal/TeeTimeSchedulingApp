@@ -1,6 +1,7 @@
 version: '3.8'
 services:
   db:
+    container_name: golf_tee_time_db
     image: postgres:14.1-alpine
     restart: always
     environment:
@@ -12,10 +13,11 @@ services:
       - ./postgresdb/dbScriptInitialSetup.sql:/docker-entrypoint-initdb.d/create_tables.sql
       
   api:
-    container_name: backend-api
+    container_name: golf_tee_time_backend
     build:
       context: ./../backend
-    image: img-golf-tee-time-schedule-api
+      dockerfile: ./../backend/Dockerfile
+    image: img_golf_tee_time_backend
     depends_on:
       - db
     ports:
@@ -31,11 +33,12 @@ services:
       - db
    
   frontend:
+    container_name: golf_tee_time_frontend
     build:
       context:  ./../frontend
       dockerfile: ./../frontend/Dockerfile
     restart: always
-    container_name: golf_tee_time_frontend
+    image: img_golf_tee_time_frontend 
     ports:
       - "3000:3000"
     volumes:
