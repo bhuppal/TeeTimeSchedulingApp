@@ -1,6 +1,23 @@
 # TeeTimeSchedulingApp
 Create a daily tee time scheduling application for your local golf course to replace their call-in process for reserving tee times. The facility offers tee times every 10 minutes between 9:00 AM - 12:00 PM. To keep things simple, assume the facility begins each day with an open schedule and only allows for same-day bookings.
 
+Live website hosted:
+https://golfteetime.azurewebsites.net/
+
+Light mode:
+![image](https://user-images.githubusercontent.com/4120729/179426691-426103f8-34b1-4739-ae26-30ac011d6555.png)
+
+Dark mode:
+![image](https://user-images.githubusercontent.com/4120729/179426699-72471ea7-51b6-45f3-a65f-605b1ccd2800.png)
+
+![image](https://user-images.githubusercontent.com/4120729/179426770-d36ab13b-edde-4890-97c0-fa564bc8b8f0.png)
+
+
+Funcationlities:
+1) On the home page, We list all the facility details
+2) Golf Player can pick any facility to do tee time booking
+3) Once the player selected the date and time, we store in the database
+
 # TeeTimeSchedulingApp project
 This project is divided into 3 parts:
   1) Main
