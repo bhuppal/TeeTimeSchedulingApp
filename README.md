@@ -12,6 +12,12 @@ Dark mode:
 
 ![image](https://user-images.githubusercontent.com/4120729/179426770-d36ab13b-edde-4890-97c0-fa564bc8b8f0.png)
 
+Booking:
+![image](https://user-images.githubusercontent.com/4120729/179426802-84b0a0b6-d754-4b07-bc61-1504927168b3.png)
+
+Validation:
+![image](https://user-images.githubusercontent.com/4120729/179426852-7683718d-4ccf-4764-8a10-19c514c16b05.png)
+
 
 Funcationlities:
 1) On the home page, We list all the facility details
